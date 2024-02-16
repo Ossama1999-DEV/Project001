@@ -1,0 +1,38 @@
+DONNEES DU PROJET :
+- 21 fichiers *.csv (1 par an) ou 1 fichier '2000-2021 SINGLE TURKEY FIRE_M-C61_214067.csv' de 17 Mb
+- Feux en Turquie de 2000 à 2021
+- Le jeu de données contient 211309 observations.
+Chaque observation contient les données de 15 facteurs :
+o 'latitude and longitude': Position géographique du feu.
+o 'brightness': Température de luminosité mesurée en kelvins
+o 'scan and track': Résolution spatiale
+o 'acq_date': Date de feu
+o 'acq_time': Heure d'acquisition du satellite (en UTC).
+o 'satellite': Detection par le satellite Terra ou le satellite Aqua
+o 'instrument': The MODIS instrument that tracks the observations is NASA’s Earth Observing System Terra and Aqua satellites.
+o 'confidence': Indicateur de qualité
+o 'version': Traitement de la collecte et de la source des données
+o 'bright_t31': Température de luminosité mesurée en kelvins
+o 'frp': Puissance radiative du feu
+o 'daynight': D pour feu diurne, N pour feu nocturne
+o 'type': 0 pour un feu de végétation présumé, 1 pour un volcan actif, 2 pour d'autres sources terrestres statiques et 3 pour une détection en mer
+
+Présentation des variables quantitatives:
+            latitude      longitude  ...            frp           type
+count  211309.000000  211309.000000  ...  211309.000000  205918.000000
+mean       38.096869      35.810523  ...      30.341675       0.138798
+min        35.822100      25.723600  ...       0.000000       0.000000
+25%        37.113200      33.037500  ...       8.900000       0.000000
+50%        37.711700      35.817400  ...      15.300000       0.000000
+75%        38.931600      39.755500  ...      30.700000       0.000000
+max        42.033000      44.796700  ...    4816.680000       3.000000
+std         1.259144       4.218867  ...      67.171226       0.509481
+
+[8 rows x 9 columns]
+
+Présentation des variables qualitatives:
+       satellite instrument daynight
+count     211309     211309   211309
+unique         2          1        2
+top        Terra      MODIS        D
+freq      113554     211309   173530

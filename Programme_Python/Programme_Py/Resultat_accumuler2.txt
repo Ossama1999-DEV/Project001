@@ -1,0 +1,48 @@
+DONNEES DU PROJET :
+- 21 fichiers *.csv (1 par an) ou 1 fichier '2000-2021 SINGLE TURKEY FIRE_M-C61_214067.csv' de 17 Mb
+- Feux en Turquie de 2000 à 2021
+- Le jeu de données contient 211309 observations.
+Chaque observation contient les données de 15 facteurs :
+o 'latitude and longitude': Position géographique du feu.
+o 'brightness': Température de luminosité mesurée en kelvins
+o 'scan and track': Résolution spatiale
+o 'acq_date': Date de feu
+o 'acq_time': Heure d'acquisition du satellite (en UTC).
+o 'satellite': Detection par le satellite Terra ou le satellite Aqua
+o 'instrument': The MODIS instrument that tracks the observations is NASA’s Earth Observing System Terra and Aqua satellites.
+o 'confidence': Indicateur de qualité
+o 'version': Traitement de la collecte et de la source des données
+o 'bright_t31': Température de luminosité mesurée en kelvins
+o 'frp': Puissance radiative du feu
+o 'daynight': D pour feu diurne, N pour feu nocturne
+o 'type': 0 pour un feu de végétation présumé, 1 pour un volcan actif, 2 pour d'autres sources terrestres statiques et 3 pour une détection en mer
+
+Données quantitatives :
+            latitude      longitude     brightness  ...     bright_t31            frp           type
+count  211309.000000  211309.000000  211309.000000  ...  211309.000000  211309.000000  205918.000000
+mean       38.096869      35.810523     323.103487  ...     302.475387      30.341675       0.138798
+min        35.822100      25.723600     300.000000  ...     265.200000       0.000000       0.000000
+25%        37.113200      33.037500     311.300000  ...     294.100000       8.900000       0.000000
+50%        37.711700      35.817400     322.100000  ...     302.800000      15.300000       0.000000
+75%        38.931600      39.755500     331.300000  ...     310.000000      30.700000       0.000000
+max        42.033000      44.796700     503.530000  ...     400.100000    4816.680000       3.000000
+std         1.259144       4.218867      15.710290  ...      10.168149      67.171226       0.509481
+
+[8 rows x 9 columns]
+
+Données qualitatives :
+       satellite instrument daynight
+count     211309     211309   211309
+unique         2          1        2
+top        Terra      MODIS        D
+freq      113554     211309   173530
+
+Toutes les données importantes :
+   latitude  longitude  brightness   acq_date  ...  bright_t31   frp daynight  type
+0   36.8527    35.3594       306.0 2000-11-01  ...       294.4  13.2        D   0.0
+1   40.5441    35.1786       307.8 2000-11-02  ...       296.0   5.8        D   0.0
+2   40.1473    35.0444       305.3 2000-11-02  ...       293.5   4.3        D   0.0
+3   40.5421    35.1909       310.0 2000-11-02  ...       296.1   7.3        D   0.0
+4   41.2569    31.4172       307.9 2000-11-02  ...       290.4   8.0        D   2.0
+
+[5 rows x 12 columns]
